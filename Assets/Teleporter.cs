@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 using Valve.VR;
 
 public class Teleporter : MonoBehaviour
@@ -9,6 +10,7 @@ public class Teleporter : MonoBehaviour
     public LineRenderer rayRenderer;
     public Material hitMaterial, notHitMaterial;
     public float maxTeleportDistance = 60f;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +28,14 @@ public class Teleporter : MonoBehaviour
         if (SteamVR_Input.GetStateUp("offroadteleport", SteamVR_Input_Sources.LeftHand))
         {
             Debug.Log("Up");
-            buttonPressed = false;
+            //teleport
+            Ray ray = new Ray(transform.position, transform.forward);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, maxTeleportDistance))
+            {
+                player.transform.position = hit.point;
+            }
+                buttonPressed = false;
         }
 
         if(buttonPressed == true)

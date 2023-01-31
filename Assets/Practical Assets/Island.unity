@@ -797,6 +797,7 @@ MonoBehaviour:
   hitMaterial: {fileID: 2100000, guid: e110ee5221d1a5a499657aab7e89bb80, type: 2}
   notHitMaterial: {fileID: 2100000, guid: cd714640e9738e44e9ce23f92b188ab5, type: 2}
   maxTeleportDistance: 60
+  player: {fileID: 1163128955}
 --- !u!1 &906372263
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,6 +917,7 @@ MonoBehaviour:
   hitMaterial: {fileID: 0}
   notHitMaterial: {fileID: 0}
   maxTeleportDistance: 60
+  player: {fileID: 0}
 --- !u!1 &986992657
 GameObject:
   m_ObjectHideFlags: 0
@@ -5891,6 +5893,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014797540}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1163128955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 836919553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1942180954
 GameObject:
   m_ObjectHideFlags: 0
